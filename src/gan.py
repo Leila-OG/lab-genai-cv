@@ -6,17 +6,15 @@ import matplotlib.pyplot as plt
 from decoder import Decoder
 import os
 
+latent_dim = 2  # Assurez-vous d'utiliser la même dim que dans le VAE
+checkpoint_dir = "../checkpoints"
+
 # -----------------------------
 # 1) On crée un 'decoder' et on charge ses poids
 # -----------------------------
-checkpoint_dir = "../checkpoints"
 decoder = Decoder()
-# On suppose que vous avez sauvegardé précédemment :
-# "vae.save_weights('vae_weights.h5')"
-# Dans ce cas, le plus simple est de recharger dans le VAE complet
-# ou juste la partie decoder si vous avez un checkpoint distinct.
-# Par exemple:
-# decoder.load_weights(os.path.join(checkpoint_dir, "decoder_weights.h5"))
+# On "build" le modèle pour un batch de taille None, dimension latente 'latent_dim'
+decoder.build(input_shape=(None, latent_dim))
 decoder.load_weights(os.path.join(checkpoint_dir, "decoder_weights.h5"))  # si vous avez une sauvegarde spécifique
 
 # -----------------------------
@@ -40,7 +38,7 @@ discriminator = Discriminator()
 # 3) Construction du GAN
 #    - On réutilise le 'decoder' comme generateur
 # -----------------------------
-latent_dim = 2  # Assurez-vous d'utiliser la même dim que dans le VAE
+
 
 z_input = tf.keras.Input(shape=(latent_dim,))
 img = decoder(z_input)           # Génération d'images
