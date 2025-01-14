@@ -13,7 +13,7 @@ import os
 # 1) Paramètres
 ############################
 latent_dim = 2
-epochs = 10
+epochs = 25
 batch_size = 128
 
 ############################
