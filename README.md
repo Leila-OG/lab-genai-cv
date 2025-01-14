@@ -33,3 +33,9 @@ Le décodeur d’un VAE fait exactement cela : étant donné un vecteur latent
 
 Un encodeur de VAE prend une image et la projette dans un espace latent (retourne μ et logσ^2). Il ne produit pas une probabilité « vrai/faux », mais des paramètres de distribution latente.
 Un discriminateur de GAN prend une image (réelle ou générée) et retourne une probabilité qu’elle soit réelle (vs. fake). Il s’agit d’un classifieur binaire, tandis que l’encodeur sert plutôt d’« encodeur probabiliste ».
+
+## Résultats 
+
+### Test 1
+![alt text](image-1.png)
+![alt text](image.png)
