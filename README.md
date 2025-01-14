@@ -39,3 +39,7 @@ Un discriminateur de GAN prend une image (réelle ou générée) et retourne une
 ### Test 1
 ![alt text](image-1.png)
 ![alt text](image.png)
+
+### Test 2 
+![alt text](image-3.png)
+![alt text](image-2.png)
