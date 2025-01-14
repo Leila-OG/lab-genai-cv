@@ -8,13 +8,15 @@ from decoder import Decoder
 # -----------------------------
 # 1) On crée un 'decoder' et on charge ses poids
 # -----------------------------
+checkpoint_dir = "../checkpoints"
 decoder = Decoder()
 # On suppose que vous avez sauvegardé précédemment :
 # "vae.save_weights('vae_weights.h5')"
 # Dans ce cas, le plus simple est de recharger dans le VAE complet
 # ou juste la partie decoder si vous avez un checkpoint distinct.
 # Par exemple:
-# decoder.load_weights("decoder_weights.h5")  # si vous avez une sauvegarde spécifique
+# decoder.load_weights(os.path.join(checkpoint_dir, "decoder_weights.h5"))
+decoder.load_weights(os.path.join(checkpoint_dir, "decoder_weights.h5"))  # si vous avez une sauvegarde spécifique
 
 # -----------------------------
 # 2) Définition du Discriminateur
