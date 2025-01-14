@@ -4,6 +4,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 from decoder import Decoder
+import os
 
 # -----------------------------
 # 1) On crée un 'decoder' et on charge ses poids
