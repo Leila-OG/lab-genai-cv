@@ -23,11 +23,8 @@ Il existe donc un compromis à trouver en fonction de la tâche (qualité de rec
 ### Réponses aux Questions
 **1. Comment le décodeur d’un VAE peut-il servir de générateur pour un GAN ?**
 
-Dans un GAN (Generative Adversarial Network), le générateur prend un échantillon 
-𝑧
-z (généralement issu d’une distribution normale N(0,I)) et produit une image (ou un signal) réaliste.
-Le décodeur d’un VAE fait exactement cela : étant donné un vecteur latent
-**z**, il génère une image. Ainsi, on peut réutiliser la même architecture (et même les poids si l’on souhaite) du décodeur pour servir de générateur dans un GAN.
+Dans un GAN (Generative Adversarial Network), le générateur prend un échantillon z (généralement issu d’une distribution normale N(0,I)) et produit une image (ou un signal) réaliste.
+Le décodeur d’un VAE fait exactement cela : étant donné un vecteur latent **z**, il génère une image. Ainsi, on peut réutiliser la même architecture (et même les poids si l’on souhaite) du décodeur pour servir de générateur dans un GAN.
 
 **2. Différences entre l’encodeur VAE et le discriminateur GAN**
 

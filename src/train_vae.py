@@ -42,7 +42,7 @@ def vae_loss(x, reconstruction, mean, log_var):
     reconstruction_loss = tf.reduce_mean(
         losses.binary_crossentropy(x, reconstruction)
     )
-    reconstruction_loss *= 28 * 28  # remise à l'échelle
+    reconstruction_loss *= 28 * 28  # remise à l'échelle (par rapport a la taille de l'image car ici on a une loss par pixel)
 
     # KL divergence
     # kl = -0.5 * sum(1 + log_var - mean^2 - exp(log_var))
