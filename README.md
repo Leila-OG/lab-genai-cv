@@ -18,7 +18,7 @@ Moins latent_dim est grand, plus la représentation est contrainte et donc moins
 Il existe donc un compromis à trouver en fonction de la tâche (qualité de reconstruction, génération, etc.).
 
 
-## Partie 1 : De VAE à VAE
+## Partie 1 : De VAE à GAN
 
 ### Réponses aux Questions
 **1. Comment le décodeur d’un VAE peut-il servir de générateur pour un GAN ?**
